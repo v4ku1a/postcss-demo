@@ -1,0 +1,8 @@
+{
+	"devDependencies": {
+		"gulp": "^1.0.0",
+		"require-dir": "^1.0.0",
+		"gulp-sass": "^1.0.0"
+
+	}
+}
