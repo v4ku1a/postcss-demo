@@ -5,25 +5,21 @@ $placeholder-gray: #a4a4a5;
 
 @mixin breakpoint($class) {
 	@if $class == xs { @media (max-width: 767px) { @content; } }
- 
-	@else if $class == sm { @media (min-width: 768px) { @content; } }
- 
-	@else if $class == md { @media (min-width: 992px) { @content; } }
- 
-	@else if $class == lg { @media (min-width: 1200px) { @content; } }
- 
-	@else { @warn "Breakpoint mixin supports: xs, sm, md, lg"; }
+ 	@else if $class == sm { @media (min-width: 768px) { @content; } }
+ 	@else if $class == md { @media (min-width: 992px) { @content; } }
+ 	@else if $class == lg { @media (min-width: 1200px) { @content; } }
+ 	@else { @warn "Breakpoint mixin supports: xs, sm, md, lg"; }
 }
 
 @keyframes fadeInUpSmall {
 	from {
-	opacity: 0;
-	transform: translate3d(0, 25%, 0);
+		opacity: 0;
+		transform: translate3d(0, 25%, 0);
 	}
 
 	to {
-	opacity: 1;
-	transform: none;
+		opacity: 1;
+		transform: none;
 	}
 }
 
