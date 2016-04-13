@@ -2,12 +2,11 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 
 var sassOptions = {
-	outputStyle: 'expanded',
-	syntax: 'scss'
+	outputStyle: 'expanded'
 }
 
 gulp.task('sass', function () {
-    gulp.src('src/styles.scss')
+    gulp.src('src/*.scss')
         .pipe(sass(sassOptions))
         .pipe(gulp.dest('build'));
 });

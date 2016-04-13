@@ -3,6 +3,6 @@ var requireDir = require('require-dir');
 
 var tasks = requireDir('./gulp-tasks');
 
-gulp.task('default', [/*'post', */'sass'], function () {
-    gulp.watch('src/**/*.{sass,css}', [/*'post', */'sass']);
+gulp.task('default', ['post', 'sass'], function () {
+    gulp.watch('src/**/*.{scss,css}', ['post', 'sass']);
 });
