@@ -1,23 +1,25 @@
 {
-	"name": "post-css-demo",
-	"version": "1.0.0",
-	"description": "post css vs sass demo",
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/twbs/bootstrap-sass"
-	},
-	"keywords": [
-		"postcss",
-		"sass",
-		"css"
-	],
-	"license": "MIT",
-	"devDependencies": {
-		"gulp": "^3.9.0",
-		"require-dir": "^0.1.0",
-		"gulp-sass": "^2.2.0"
-	},
-	"dependencies": {
-		"bootstrap": "^3.3.3"
-	}
+  "name": "post-css-demo",
+  "version": "1.0.0",
+  "description": "post css vs sass demo",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/twbs/bootstrap-sass"
+  },
+  "keywords": [
+    "postcss",
+    "sass",
+    "css"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "gulp": "^3.9.0",
+    "gulp-postcss": "^6.0.0",
+    "gulp-sass": "^2.2.0",
+    "require-dir": "^0.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.3"
+  }
 }
