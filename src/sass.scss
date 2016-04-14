@@ -1,220 +1,98 @@
-$pastel-pink: #c8b8b8;
-$error-red: #f64744;
-$success-green: #0da93e;
-$placeholder-gray: #a4a4a5;
+@import '_vars';
 
-@mixin breakpoint($class) {
-	@if $class == xs { @media (max-width: 767px) { @content; } }
- 	@else if $class == sm { @media (min-width: 768px) { @content; } }
- 	@else if $class == md { @media (min-width: 992px) { @content; } }
- 	@else if $class == lg { @media (min-width: 1200px) { @content; } }
- 	@else { @warn "Breakpoint mixin supports: xs, sm, md, lg"; }
+.card-container {
+	background-color: #3C3F50;
+	margin: 0;
+	height: 100vh;
+	display: flex;
+	font-family: Menlo, Consolas;
 }
 
-@keyframes fadeInUpSmall {
-	from {
-		opacity: 0;
-		transform: translate3d(0, 25%, 0);
+.card {
+	position: relative;
+	width: 400px;
+	margin: auto;
+	background-color: #fff;
+	border-radius: 10px;
+	text-align: center;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
+	&:after,
+	&:before {
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: 100%;
+		width: 95%;
+		height: 8px;
+		background-color: #fff;
+		border: 1px solid #CCC;
+		border-top: 0;
+		border-radius: 0 0 10px 10px;
+		z-index: -1;
+		transform: translateX(-50%);
+		box-shadow: 0 0 10px rgba(0, 0, 0, .2)
 	}
-
-	to {
-		opacity: 1;
-		transform: none;
+	&:before {
+		width: 88%;
+		top: calc(100% + 8px);
 	}
-}
-
-@keyframes fillCircle {
-	from { fill: transparent; }
-	to { fill: #fff; }
-}
-
-@keyframes fillNotch {
-	from { fill: transparent; }
-	to { fill: #f04444; }
-}
-
-a,
-button { transition: all .15s ease-out; }
-
-a { 
-	color: $pastel-pink;
-	
-	&:hover { color: darken($pastel-pink, 10%); }
-}
-
-::-webkit-input-placeholder { color: $placeholder-gray; }
-
-:-moz-placeholder { color: $placeholder-gray; }
-
-::-moz-placeholder { color: $placeholder-gray; }
-
-:-ms-input-placeholder { color: $placeholder-gray; }
-
-body {
-	font-family: 'Muli';
-	-webkit-font-smoothing: antialiased;
-	background-image: url('http://brunocunha.net/dailyui/001/background.jpg');
-	background-position: 50% 50%;
-	background-size: 250% auto;
-}
-
-.btn { 
-	padding-top: 14px;
-	padding-bottom: 14px;
-	border-radius: 2px;
-}
-
-.btn-primary {
-	background-color: $pastel-pink;
-	border-color: $pastel-pink;
-	
-	&:active,
-	&:focus,
-	&:active:focus,
-	&:active:hover {
-	background-color: darken($pastel-pink, 20%);
-	box-shadow: none;
-	border-color: darken($pastel-pink, 20%);
+	.avatar {
+		width: 100px;
+		height: 100px;
+		border-radius: 100%;
+		position: relative;
+		margin-top: 2em;
+		z-index: 2;
+		box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 	}
-	
-	&:hover,
-	&:focus {
-	background-color: darken($pastel-pink, 10%);
-	border-color: darken($pastel-pink, 10%);
+	.name {
+		font-weight: 100;
 	}
-}
-
-.delay--450 { animation-delay: 450ms; }
-
-.fadeInUpSmall { animation-name: fadeInUpSmall; }
-
-.form-control {
-	height: 40px;
-	padding: 9px 0;
-	background-color: transparent;
-	font-weight: 300;
-	border: 0;
-	border-radius: 0;
-	border-bottom: 2px solid $pastel-pink;
-	box-shadow: none;
-	transition: border-color .15s ease-out;
-	
-	&:focus {
-	border-color: darken($pastel-pink, 10%);
-	box-shadow: none;
+	aside {
+		display: inline-flex;
+		width: 100%;
+		border-top: 1px solid #E2E2E2;
+		a {
+			flex: 1;
+			cursor: pointer;
+			padding: 5px;
+			&:hover {
+				color: #5B61A0;
+			}
+			&:last-child {
+				border-right: none;
+			}
+		}
+		.cate,
+		.count {
+			display: block;
+		}
+		.count {
+			margin: 5px 0 5px;
+			i {
+				color: #5C5EDC;
+			}
+		}
+		.cate {
+			color: #999;
+			font-size: 10px;
+			text-transform: uppercase;
+		}
 	}
-	
-	&.error { 
-	border-color: $error-red;
-	box-shadow: none;
-	}
-	
-	.has-error &,
-	.has-error &:focus,
-	.has-success &,
-	.has-success &:focus { box-shadow: none; }
-}
-
-.form-control-feedback { line-height: 44px; }
-
-.form-group { margin-bottom: 30px; }
-
-label {
-	margin-bottom: 0;
-	
-	&.error {
-	margin-top: 10px;
-	letter-spacing: 0;
-	text-transform: inherit;
-	color: $error-red;
+	.background {
+		width: 100%;
+		height: 100px;
+		position: absolute;
+		top: 0;
+		background: #3C3F50;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
 	}
 }
 
-label,
-small { 
-	font-weight: 100;
-	letter-spacing: 1.5px;
-	text-transform: uppercase;
-}
-
-.panel { 
-	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .5);
-	padding-top: 20px;
-	padding-bottom: 20px;
-	padding-left: 25px;
-	padding-right: 25px;
-	color: #757576;
-	background-color: rgba(249, 249, 249, .94);
-	
-	@include breakpoint(xs) { 
-	padding-left: 15px;
-	padding-right: 15px;
+@media(min-width: 500px) {
+	.inner-box {
+		width: 50px;
+		height: 50px;
 	}
-}
-
-.sign-up { 
-	@include breakpoint(sm) { margin-top: 72px; }
-	color: #fff;
-}
-
-.sign-up__background {
-	padding-top: 64px;
-	padding-bottom: 24px;
-	background: url('http://brunocunha.net/dailyui/001/panel-background.jpg'), linear-gradient(-140deg, rgba(#2C466F, .35), transparent);
-	background-blend-mode: darken;
-	background-position: 50% 50%;
-	background-size: cover;
-	
-	@include breakpoint(sm) { 
-	margin-bottom: 96px;
-	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .5); 
-	}
-}
-
-.sign-up__byline {
-	margin-bottom: 15px;
-	font-weight: 300;
-	letter-spacing: 2px;
-	
-	.fa { font-size: 28px; }
-	
-	.list-inline {
-	> li {
-		padding-left: 15px;
-		padding-right: 15px;
-		
-		&:last-child { padding-right: 0; }
-	}
-	}
-}
-
-.sign-up__header { position: relative; }
-
-#sign-up__logo { margin-bottom: 24px; }
-
-#sign-up__logo__circle,
-#sign-up__logo__notch { fill: transparent; }
-
-#sign-up__logo__circle { 
-	animation: 750ms ease-out 750ms fillCircle forwards;
-	stroke: #fff; 
-}
-	
-#sign-up__logo__notch {
-	animation: 750ms ease-out 750ms fillNotch forwards;
-	stroke: #f04444;
-}
-
-.sign-up__title { 
-	margin-bottom: 48px;
-	font-family: 'Lora';
-	letter-spacing: 4px;
-}
-
-.sign-up__wrapper { 
-	@include breakpoint(xs) { 
-	left: 50%;
-	margin-left: -180px;
-	max-width: 360px; 
-	} 
 }

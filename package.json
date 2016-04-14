@@ -14,9 +14,18 @@
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^6.3.6",
+    "css-mqpacker": "^4.0.1",
+    "cssnano": "^3.5.2",
     "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-combine-mq": "^0.4.0",
+    "gulp-cssnano": "^2.1.1",
     "gulp-postcss": "^6.0.0",
     "gulp-sass": "^2.2.0",
+    "postcss-color-rgba-fallback": "^2.2.0",
+    "postcss-font-magician": "^1.4.0",
+    "postcss-import": "^8.1.0",
+    "postcss-nested": "^1.0.0",
     "require-dir": "^0.1.0"
   },
   "dependencies": {

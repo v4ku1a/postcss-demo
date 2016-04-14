@@ -1,4 +1,98 @@
-.test {
-    background: black;
-    display: flex;
+@import url('vars.css');
+
+.card-container {
+	background-color: #3C3F50;
+	margin: 0;
+	height: 100vh;
+	display: flex;
+	font-family: 'Indie Flower';
+}
+
+.card {
+	position: relative;
+	width: 400px;
+	margin: auto;
+	background-color: #fff;
+	border-radius: 10px;
+	text-align: center;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
+	&:after,
+	&:before {
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: 100%;
+		width: 95%;
+		height: 8px;
+		background-color: #fff;
+		border: 1px solid #CCC;
+		border-top: 0;
+		border-radius: 0 0 10px 10px;
+		z-index: -1;
+		transform: translateX(-50%);
+		box-shadow: 0 0 10px rgba(0, 0, 0, .2)
+	}
+	&:before {
+		width: 88%;
+		top: calc(100% + 8px);
+	}
+	.avatar {
+		width: 100px;
+		height: 100px;
+		border-radius: 100%;
+		position: relative;
+		margin-top: 2em;
+		z-index: 2;
+		box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+	}
+	.name {
+		font-weight: 100;
+	}
+	aside {
+		display: inline-flex;
+		width: 100%;
+		border-top: 1px solid #E2E2E2;
+		a {
+			flex: 1;
+			cursor: pointer;
+			padding: 5px;
+			&:hover {
+				color: #5B61A0;
+			}
+			&:last-child {
+				border-right: none;
+			}
+		}
+		.cate,
+		.count {
+			display: block;
+		}
+		.count {
+			margin: 5px 0 5px;
+			i {
+				color: #5C5EDC;
+			}
+		}
+		.cate {
+			color: #999;
+			font-size: 10px;
+			text-transform: uppercase;
+		}
+	}
+	.background {
+		width: 100%;
+		height: 100px;
+		position: absolute;
+		top: 0;
+		background: #3C3F50;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+	}
+}
+
+@media(min-width: 500px) {
+	.inner-box {
+		width: 50px;
+		height: 50px;
+	}
 }
