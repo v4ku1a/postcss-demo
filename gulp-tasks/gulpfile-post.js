@@ -24,7 +24,7 @@ var processors = [
 
 
 gulp.task('post', function () {
-    gulp.src('src/*.css')
+    gulp.src('src/post.css')
         .pipe(postcss(processors))
         .pipe(gulp.dest('build'));
 });

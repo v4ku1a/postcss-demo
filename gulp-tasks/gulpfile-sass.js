@@ -14,7 +14,7 @@ var autoPrefOptions = {
 
 
 gulp.task('sass', function () {
-    gulp.src('src/*.scss')
+    gulp.src('src/sass.scss')
         .pipe(sass(sassOptions))
         .pipe(gulpAutoprefixer(autoPrefOptions))
         // .pipe(cssnano())

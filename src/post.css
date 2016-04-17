@@ -1,7 +1,8 @@
 @import url('vars.css');
+/*TODO cssnext*/
 
 .card-container {
-	background-color: #3C3F50;
+	background-color: var(--main-bg);
 	margin: 0;
 	height: 100vh;
 	display: flex;
