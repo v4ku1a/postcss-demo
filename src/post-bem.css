@@ -1,18 +1,31 @@
-@import '_vars';
+@import url('vars.css');
+
+
+@block super-block {
+	color: green;
+
+	@element inner-block {
+		color: black;
+	}
+
+	@modifier favourite {
+		border: gold;
+	}
+}
 
 .card-container {
-	background-color: $main-bg;
+	background-color: var(--main-bg);
 	margin: 0;
 	height: 100vh;
 	display: flex;
-	font-family: $main-font;
+	font-family: var(--main-font);
 }
 
 .card {
 	position: relative;
 	width: 400px;
 	margin: auto;
-	background-color: $card-bg;
+	background-color: var(--card-bg);
 	border-radius: 10px;
 	text-align: center;
 	box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
@@ -24,7 +37,7 @@
 		top: 100%;
 		width: 95%;
 		height: 8px;
-		background-color: $card-bg;
+		background-color: var(--card-bg);
 		border: 1px solid #CCC;
 		border-top: 0;
 		border-radius: 0 0 10px 10px;
@@ -84,7 +97,7 @@
 		height: 100px;
 		position: absolute;
 		top: 0;
-		background: $main-bg;
+		background: var(--main-bg);
 		border-top-left-radius: 5px;
 		border-top-right-radius: 5px;
 	}

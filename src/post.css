@@ -1,19 +1,18 @@
 @import url('vars.css');
-/*TODO cssnext*/
 
 .card-container {
 	background-color: var(--main-bg);
 	margin: 0;
 	height: 100vh;
 	display: flex;
-	font-family: 'Indie Flower';
+	font-family: var(--main-font);
 }
 
 .card {
 	position: relative;
 	width: 400px;
 	margin: auto;
-	background-color: #fff;
+	background-color: var(--card-bg);
 	border-radius: 10px;
 	text-align: center;
 	box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
@@ -25,11 +24,11 @@
 		top: 100%;
 		width: 95%;
 		height: 8px;
-		background-color: #fff;
+		background-color: var(--card-bg);
 		border: 1px solid #CCC;
 		border-top: 0;
 		border-radius: 0 0 10px 10px;
-		z-index: -1;
+		// z-index: -1;
 		transform: translateX(-50%);
 		box-shadow: 0 0 10px rgba(0, 0, 0, .2)
 	}
@@ -85,7 +84,7 @@
 		height: 100px;
 		position: absolute;
 		top: 0;
-		background: #3C3F50;
+		background: var(--main-bg);
 		border-top-left-radius: 5px;
 		border-top-right-radius: 5px;
 	}
