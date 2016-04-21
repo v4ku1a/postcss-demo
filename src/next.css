@@ -33,7 +33,7 @@
 	&__container {
 		background-color: var(--main-bg);
 		margin: 0;
-		height: 100vh;
+		min-height: 100vh;
 		display: flex;
 		font-family: var(--main-font);
 	}

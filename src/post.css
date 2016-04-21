@@ -4,7 +4,6 @@
 	position: relative;
 	width: 400px;
 	margin: auto;
-	// background-color: var(--card-bg);
 	background-color: $card-bg;
 	border-radius: 10px;
 	text-align: center;
@@ -18,12 +17,10 @@
 		top: 100%;
 		width: 95%;
 		height: 8px;
-		// background-color: var(--card-bg);
 		background-color: $card-bg;
 		border: 1px solid #CCC;
 		border-top: 0;
 		border-radius: 0 0 10px 10px;
-		// z-index: -1;
 		transform: translateX(-50%);
 		box-shadow: 0 0 10px rgba(0, 0, 0, .2)
 	}
@@ -34,13 +31,11 @@
 	}
 
 	&__container {
-		// background-color: var(--main-bg);
 		background-color: $main-bg;
 		margin: 0;
-		height: 100vh;
+		min-height: 100vh;
 		display: flex;
 		font-family: $main-font;
-		// font-family: var(--main-font);
 	}
 
 	&__avatar {
@@ -61,6 +56,7 @@
 		display: inline-flex;
 		width: 100%;
 		border-top: 1px solid #E2E2E2;
+		overflow: hidden;
 	}
 
 	&__link {
@@ -95,7 +91,6 @@
 		height: 100px;
 		position: absolute;
 		top: 0;
-		// background: var(--main-bg);
 		background: $main-bg;
 		border-top-left-radius: 5px;
 		border-top-right-radius: 5px;

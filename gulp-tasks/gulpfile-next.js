@@ -3,19 +3,18 @@ var postcss = require('gulp-postcss');
 
 // var autoprefixer = require('autoprefixer');
 
-var cssnano = require('cssnano');
-
 var fontMagician = require('postcss-font-magician');
 var atImport = require('postcss-import');
 
 var cssnext = require('postcss-cssnext');
+var level4 = require('level4');
 
 
 var processors = [
     // autoprefixer({browsers: ['last 2 versions']}),
-    // cssnano,
     atImport,
     cssnext,
+    // level4,
     fontMagician
 ];
 
