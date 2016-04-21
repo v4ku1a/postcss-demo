@@ -1,0 +1,19 @@
+1. intro                                              2-5 min
+2. main principle                                     2 min
+3. gulp setup (mention other runners and codepen)     3-5 min
+4. Cross Browser Compatibility(Autoprefixer)          5 min
+5. Minification and Optimization                      3 min
+6. Preprocessor plugins vs Less Sass (mention PreCss) 5-10 min
+7. cssnext/level4                                     3 min
+8. PostCSS with BEM (postcss-bem linters)             2-3 min
+9. grid systems(lost grid, ie8)                       3 min
+
+10. outtro(summary, thoughts, other stuff, reworkcss) 3 min
+
+11. Fun stuff...                                      2 min
+
+                                                      ~40 min
+
+													  
+													  
+https://slides.com/

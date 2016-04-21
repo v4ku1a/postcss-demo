@@ -1,7 +1,5 @@
-:root {
-	--main-font: 'Indie Flower';
 
-	--main-bg: #3C3F50;
-	--card-bg: #FFFFFF;
-}
+$main-font: 'Indie Flower';
 
+$main-bg: #3C3F50;
+$card-bg: #FFFFFF;

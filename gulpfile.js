@@ -4,10 +4,6 @@ var browserSync = require('browser-sync').create();
 
 var tasks = requireDir('./gulp-tasks');
 
-gulp.task('default', ['post', 'sass'], function () {
-    gulp.watch('src/**/*.{scss,css}', ['post', 'sass']);
-});
-
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
@@ -17,3 +13,6 @@ gulp.task('browser-sync', function() {
     });
 });
 
+gulp.task('clean', function() {
+	del(['build/*.css']);
+});
