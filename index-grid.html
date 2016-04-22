@@ -1,25 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>PostCss demo</title>
-    <!-- Latest compiled and minified CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <link rel="stylesheet" href="build/post.css">
+    <!-- <link rel="stylesheet" href="build/post.css"> -->
     <!-- <link rel="stylesheet" href="build/sass.css"> -->
-    <!-- <link rel="stylesheet" href="build/bem.css"> -->
+    <link rel="stylesheet" href="build/bem.css">
     <!-- <link rel="stylesheet" href="build/next.css"> -->
     <link rel="stylesheet" href="build/grid.css">
+    <style>
+        a {
+            outline: none !important;
+        }
+    </style>
 
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <![endif]-->
-    <!-- <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> -->
+        <!-- <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script> -->
 
 </head>
 
-<body ng-app="">
+<body >
 
 
     <div class="card__container">
@@ -103,10 +109,36 @@
             <div class='card__background'></div>
         </div>
 
+        <div class='card'  >
+            <img class='card__avatar' src='https://s3.amazonaws.com/uifaces/faces/twitter/krystynheide/73.jpg'>
+            <h1 class='card__name'>Hello World</h1>
+            <aside class="card__aside">
+                <a class="card__link">
+                    <span class='card__count'>
+                        <i class='fa fa-facebook'></i>
+                    </span>
+                    <span class='card__cate'>1500 friends</span>
+                </a>
+                <a class="card__link">
+                    <span class='card__count'>
+                        <i class='fa fa-twitter'></i>
+                    </span>
+                    <span class='card__cate'>500 followers</span>
+                </a>
+                <a class="card__link">
+                    <span class='card__count'>
+                        <i class='fa fa-instagram'></i>
+                    </span>
+                    <span class='card__cate'>500k followers</span>
+                </a>
+            </aside>
+            <div class='card__background'></div>
+        </div>
+
     </div>
 
 
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.29/angular.min.js"></script>
 
 <!--[if lt IE 9]>
     <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
