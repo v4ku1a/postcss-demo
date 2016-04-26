@@ -12,11 +12,11 @@ var cssnano = require('cssnano');
 var nested = require('postcss-nested');
 var cssVariables = require('postcss-css-variables');
 var simpleVars = require('postcss-simple-vars');
+
 var fontMagician = require('postcss-font-magician');
 
 var cssnext = require('postcss-cssnext');
 
-var bem = require('postcss-bem');
 
 
 var processors = [
@@ -28,18 +28,8 @@ var processors = [
     nested,
     mqpacker,
     simpleVars,
-    cssVariables,
-    fontMagician,
-	bem({
-		style:'bem',
-		separators: {
-        	modifier: ':'
-    	},
-		shortcuts: {
-        	component: 'block',
-        	descendent: 'element'
-    	}
-	})
+    // cssVariables,
+    fontMagician
 ];
 
 // shuffle(processors);
@@ -63,12 +53,12 @@ gulp.task('post', function () {
 
 
 
-function shuffle(a) {
-    var j, x, i;
-    for (i = a.length; i; i -= 1) {
-        j = Math.floor(Math.random() * i);
-        x = a[i - 1];
-        a[i - 1] = a[j];
-        a[j] = x;
-    }
-}
+// function shuffle(a) {
+//     var j, x, i;
+//     for (i = a.length; i; i -= 1) {
+//         j = Math.floor(Math.random() * i);
+//         x = a[i - 1];
+//         a[i - 1] = a[j];
+//         a[j] = x;
+//     }
+// }
