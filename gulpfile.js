@@ -5,7 +5,7 @@ var del = require('del');
 
 var tasks = requireDir('./gulp-tasks');
 
-gulp.task('browser-sync', function() {
+gulp.task('bs', function() {
     browserSync.init({
         server: {
             baseDir: "./"

@@ -7,33 +7,36 @@ var opacityFallback = require('postcss-opacity')
 
 var atImport = require('postcss-import');
 var mqpacker = require('css-mqpacker');
-// var cssnano = require('cssnano');
+var cssnano = require('cssnano');
 
 var nested = require('postcss-nested');
 var simpleVars = require('postcss-simple-vars');
 
 var fontMagician = require('postcss-font-magician');
 
-// var cssnext = require('postcss-cssnext');
+var cssnext = require('postcss-cssnext');
 
+var ruStyles = require('postcss-russian-stylesheets');
+var lolCat = require('lolcat-css-values');
 
 
 var processors = [
+    ruStyles,
+    // lolCat,
     autoprefixer({browsers: ['last 2 versions']}),
     colorRgbaFallback,
     opacityFallback,
     atImport,
-    // cssnano,
     nested,
     mqpacker,
     simpleVars,
     fontMagician
 ];
 
-shuffle(processors);
 
-gulp.task('post', function () {
-    gulp.src(['src/post.css'])
+
+gulp.task('fun', function () {
+    gulp.src(['src/fun.css'])
         .pipe(postcss(processors))
         .pipe(gulp.dest('build'));
 });
@@ -48,14 +51,3 @@ gulp.task('post', function () {
 
 
 
-
-
-function shuffle(a) {
-    var j, x, i;
-    for (i = a.length; i; i -= 1) {
-        j = Math.floor(Math.random() * i);
-        x = a[i - 1];
-        a[i - 1] = a[j];
-        a[j] = x;
-    }
-}

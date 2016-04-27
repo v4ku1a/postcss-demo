@@ -6,7 +6,6 @@ var colorRgbaFallback = require('postcss-color-rgba-fallback');
 
 var atImport = require('postcss-import');
 
-// var nested = require('postcss-nested');
 var simpleVars = require('postcss-simple-vars');
 var fontMagician = require('postcss-font-magician');
 
@@ -17,7 +16,6 @@ var processors = [
     autoprefixer({browsers: ['last 2 versions']}),
     colorRgbaFallback,
     atImport,
-    // nested,
     simpleVars,
     fontMagician,
 	bem({
